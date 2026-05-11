@@ -1,0 +1,349 @@
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("fonts/InstrumentSerif-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("fonts/InstrumentSerif-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: block;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+/* ─── View Transitions (cross-page fade) ─── */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: vt-fade-out 0.18s ease forwards;
+}
+
+::view-transition-new(root) {
+  animation: vt-fade-in 0.25s ease forwards;
+}
+
+@keyframes vt-fade-out {
+  to { opacity: 0; }
+}
+
+@keyframes vt-fade-in {
+  from { opacity: 0; }
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #ffb5d6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Screens ─── */
+.screen {
+  min-height: 100dvh;
+  background: #ffb5d6;
+}
+
+/* ─── Main screen ─── */
+.screen-main {
+  display: flex;
+  justify-content: center;
+}
+
+.shell {
+  width: 100%;
+  max-width: 402px;
+  min-height: 100dvh;
+  padding: clamp(85px, 10.5dvh, 112px) 24px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(60px, 9dvh, 87px);
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.icon-heart {
+  display: block;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+}
+
+.title {
+  margin: 0;
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 71px;
+  line-height: 69px;
+  text-align: center;
+  color: #000;
+}
+
+.time {
+  margin: 0;
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 49px;
+  text-align: center;
+  color: #000;
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Button group — restaurant + accept overlap */
+.btn-group {
+  position: relative;
+  width: 100%;
+  height: 278px; /* 120.62 + 157 */
+  flex-shrink: 0;
+}
+
+/* Restaurant pill */
+.btn-restaurant {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 162px;
+  border-radius: 81px;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.15s ease;
+}
+
+.btn-restaurant:hover {
+  transform: scale(0.96);
+}
+
+.btn-restaurant:active {
+  transform: scale(0.92);
+}
+
+.btn-restaurant__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.btn-restaurant__label {
+  position: absolute;
+  top: 51px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "Instrument Serif", serif;
+  font-size: 32px;
+  line-height: 49px;
+  color: #fff;
+}
+
+.btn-restaurant__icon {
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Accept pill */
+.btn-accept {
+  position: absolute;
+  top: 121px;
+  left: 0;
+  width: 100%;
+  height: 157px;
+  border-radius: 78.5px;
+  border: none;
+  cursor: pointer;
+  background: url("btn-accept-bg.png") center / cover no-repeat;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 49px;
+  color: #000;
+  text-align: center;
+  transition: transform 0.15s ease;
+}
+
+.btn-accept:hover {
+  box-shadow: none;
+  transform: scale(0.96);
+}
+
+.btn-accept:active {
+  transform: scale(0.92);
+}
+
+/* Hint text */
+.hint {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: center;
+  color: #000;
+}
+
+/* Arrow */
+.icon-arrow {
+  position: absolute;
+  bottom: 10px;
+  left: 7px;
+  display: block;
+  pointer-events: none;
+}
+
+/* ─── Loader screen ─── */
+.screen-loader {
+  min-height: 100dvh;
+  background: #ffb5d6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.loader-hearts {
+  display: flex;
+  align-items: flex-start;
+}
+
+.lh {
+  display: block;
+  width: 43px;
+  height: 52px;
+  animation: pulse 0.9s ease-in-out infinite alternate;
+}
+
+.lh:nth-child(1) { animation-delay: 0s; }
+.lh:nth-child(2) { animation-delay: 0.15s; }
+.lh:nth-child(3) { animation-delay: 0.3s; }
+.lh:nth-child(4) { animation-delay: 0.45s; }
+.lh:nth-child(5) { animation-delay: 0.6s; }
+
+@keyframes pulse {
+  from { opacity: 0.3; transform: scaleY(0.85); }
+  to   { opacity: 1;   transform: scaleY(1); }
+}
+
+.loader-text {
+  margin: 0;
+  font-family: "Instrument Serif", serif;
+  font-size: 41px;
+  line-height: 1;
+  color: #000;
+}
+
+/* ─── Success screen ─── */
+.screen-success {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 179px 16px 16px;
+  background: #fff;
+}
+
+.success-card {
+  width: 100%;
+  max-width: 370px;
+  border-radius: 70px;
+  background: #ffb5d6;
+  padding: 66px 24px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.success-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 43px;
+}
+
+.success-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.success-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(0,0,0,0.2);
+}
+
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Instrument Serif", serif;
+  font-size: 32px;
+  line-height: 49px;
+  color: #000;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .lh { animation: none; opacity: 1; transform: none; }
+  .btn-accept, .btn-telegram { transition: none; }
+}

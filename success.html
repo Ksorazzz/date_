@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yaaay!</title>
+    <link rel="preload" href="fonts/InstrumentSerif-Regular.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="fonts/InstrumentSerif-Italic.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="stylesheet" href="success.css" />
+  </head>
+  <body>
+    <div class="page">
+
+      <!-- Pattern (hearts, top) -->
+      <img
+        class="pattern"
+        src="assets/pattern.svg"
+        alt=""
+      />
+
+      <!-- Card -->
+      <div class="card">
+
+        <!-- Header -->
+        <div class="card-header">
+          <img
+            class="icon-success"
+            src="assets/icon-success.svg"
+            alt=""
+            width="92"
+            height="86"
+          />
+          <div class="card-header-text">
+            <p class="title">Yaaay</p>
+            <p class="subtitle">I can't wait for this day!!!</p>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="card-footer">
+
+          <!-- Table -->
+          <div class="table">
+            <div class="divider"></div>
+            <div class="table-row">
+              <span>Date:</span>
+              <span>may 16, 18:30</span>
+            </div>
+            <div class="divider"></div>
+            <div class="table-row">
+              <span>Place:</span>
+              <a class="place-value" href="https://www.instagram.com/sanszajn_poznan/" target="_blank" rel="noopener noreferrer">
+                sanszajn
+                <img
+                  src="assets/icon-arrow-small.svg"
+                  alt=""
+                  width="9"
+                  height="9"
+                />
+              </a>
+            </div>
+          </div>
+
+          <!-- Telegram button -->
+          <a
+            class="btn-telegram"
+            href="https://t.me/bbborshchov"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="btn-telegram__avatar"
+              src="assets/avatar.png"
+              alt=""
+              width="36"
+              height="36"
+            />
+            <span>Go to a telegram chat</span>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+    <script>
+      document.fonts.ready.then(function () {
+        document.querySelector(".page").classList.add("ready");
+      });
+    </script>
+  </body>
+</html>

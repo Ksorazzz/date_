@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Invitation to a date</title>
+    <link rel="preload" href="fonts/InstrumentSerif-Regular.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="fonts/InstrumentSerif-Italic.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Preload heavy assets for this page -->
+    <link rel="preload" href="assets/btn-restaurant-bg.png" as="image" />
+    <!-- Prefetch next page and its resources -->
+    <link rel="prefetch" href="success.html" as="document" />
+    <link rel="prefetch" href="success.css" />
+    <link rel="prefetch" href="btn-telegram-bg.png" />
+    <link rel="prefetch" href="assets/pattern.svg" />
+    <link rel="prefetch" href="assets/icon-success.svg" />
+    <link rel="prefetch" href="assets/avatar.png" />
+  </head>
+  <body>
+    <!-- SCREEN 1: Main -->
+    <section class="screen screen-main" id="screen-main">
+      <div class="shell">
+
+        <!-- Header -->
+        <div class="header">
+          <img
+            class="icon-heart"
+            src="assets/icon-heart.svg"
+            alt=""
+            width="43"
+            height="52"
+          />
+          <div class="header-text">
+            <h1 class="title">Invitation<br>to a date</h1>
+            <p class="time">may 16, 18:30</p>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+
+          <!-- Button group (restaurant + accept overlap) -->
+          <div class="btn-group">
+            <!-- Restaurant pill -->
+            <a
+              class="btn-restaurant"
+              href="https://www.instagram.com/sanszajn_poznan/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="btn-restaurant__bg"
+                src="assets/btn-restaurant-bg.png"
+                alt="Sanszajn restaurant"
+              />
+              <span class="btn-restaurant__label">
+                place: sanszajn
+                <img
+                  class="btn-restaurant__icon"
+                  src="assets/icon-link.svg"
+                  alt=""
+                  width="9"
+                  height="9"
+                />
+              </span>
+            </a>
+
+            <!-- Accept pill -->
+            <a class="btn-accept" id="btn-accept" href="success.html">
+              <span>Accept</span>
+            </a>
+          </div>
+
+          <!-- Hint text -->
+          <p class="hint">
+            Click accept if you love your boyfriend Nikita!<br>
+            no cookies, we eat all!
+          </p>
+
+          <!-- Arrow -->
+          <img
+            class="icon-arrow"
+            src="assets/icon-arrow.svg"
+            alt=""
+            width="33"
+            height="42"
+          />
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SCREEN 2: Loader -->
+    <section class="screen screen-loader" id="screen-loader" hidden>
+      <div class="loader-box">
+        <div class="loader-hearts">
+          <img class="lh" src="heart-outline.svg" alt="" width="43" height="52">
+          <img class="lh" src="heart-outline.svg" alt="" width="43" height="52">
+          <img class="lh" src="heart-filled.svg" alt="" width="43" height="52">
+          <img class="lh" src="heart-outline.svg" alt="" width="43" height="52">
+          <img class="lh" src="heart-outline.svg" alt="" width="43" height="52">
+        </div>
+        <p class="loader-text">loading</p>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
