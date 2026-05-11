@@ -86,7 +86,7 @@ html, body {
   padding: 66px 24px 30px;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 65px;
 }
 
 /* Card header */
@@ -115,8 +115,8 @@ html, body {
   font-family: "Instrument Serif", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 71px;
-  line-height: 69px;
+  font-size: 61px;
+  line-height: 59px;
   color: #000;
 }
 
